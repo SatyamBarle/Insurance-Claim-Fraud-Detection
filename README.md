@@ -33,20 +33,20 @@ Trained model exported as model.pkl
 Flask REST API (fraud_detection_api/app.py) accepts JSON input and returns prediction + confidence score
 
 **Setup & Run**
-1.Clone Repo
+# 1.Clone Repo
 git clone https://github.com/<your-username>/insurance-claim-fraud-detection.git
 cd insurance-claim-fraud-detection
 
-2.Install Dependencies
+# 2.Install Dependencies
 python -m venv venv
 .\venv\Scripts\activate   # on Windows
 pip install -r requirements.txt
 
-3.Run Flask API
+# 3.Run Flask API
 cd fraud_detection_api
 python app.py
 
-4.Test API
+# 4.Test API
 Invoke-WebRequest -Uri http://127.0.0.1:5000/predict -Method POST -ContentType "application/json" -Body '{
     "months_as_customer": 120,
     "policy_deductable": 1000,
